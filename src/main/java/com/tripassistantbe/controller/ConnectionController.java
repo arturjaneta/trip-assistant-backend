@@ -18,4 +18,9 @@ public class ConnectionController {
                 "message", "Connection works"
         ));
     }
+
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("test");
+    }
 }
