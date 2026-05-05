@@ -12,6 +12,5 @@ COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
+ENV SPRING_PROFILES_ACTIVE=prod
 ENTRYPOINT ["/app/entrypoint.sh"]
-
-
